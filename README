@@ -1,0 +1,59 @@
+# SA Football Data Platform
+
+An end-to-end data engineering platform designed to extract, process, model, and serve Premier Soccer League (PSL) analytics to drive automated sports content creation.
+
+---
+
+## Overview
+
+The platform extracts raw match, fixture, and player logs directly from public PSL endpoints, standardizes raw payloads through a Medallion architecture, and loads clean data into a PostgreSQL dimensional warehouse built on Kimball modeling principles. Dedicated SQL analytical views compute complex metrics (such as form guides, rolling goal trends, and defense splits) to automatically feed Python graphics generation scripts.
+
+---
+
+## Technical Stack
+
+- **Language:** Python 3.11+
+- **Database Engine:** PostgreSQL 15+ (Production/Container) | SQLite (Local Fallback)
+- **Ingestion:** `httpx`, `BeautifulSoup4`, `Playwright`
+- **Data Transformation:** `SQLAlchemy 2.0`, `Pandas`
+- **Orchestration:** Apache Airflow
+- **Infrastructure:** Docker & Docker Compose
+- **Graphic Automation:** Python `Pillow`
+
+---
+
+## Architecture & Data Pipeline
+
+1. **Ingestion Layer (`ingestion/`):** Custom scrapers pull raw fixture calendars, live scores, and player match statistics via HTTP endpoints and browser automation.
+2. **Staging Layer (`transformations/staging/`):** Cleans raw payloads, handles missing attributes, converts timestamps, and loads standardized structures into the Bronze schema.
+3. **Warehouse Layer (`transformations/warehouse/`):** Normalizes cleaned records into Gold-standard Fact (`fact_matches`, `fact_player_stats`) and Dimension (`dim_clubs`, `dim_players`) tables.
+4. **Analytics Layer (`analytics/`):** SQL Window Functions and CTE views compute key metrics for visual cards (e.g., Last 5 Games Form, Home/Away splits, Clean Sheet totals).
+5. **Graphics Engine (`graphics/`):** Reads analytical views directly from PostgreSQL and renders customized PNG assets ready for automated posting.
+
+---
+
+## Project Structure
+
+```text
+SA Football Data Platform/
+├── ingestion/                  # Web scrapers & raw payload extractors
+│   ├── historical/             # Multi-season historical data loaders
+│   ├── live/                   # Weekly match & fixture polling
+│   └── sources/                # Base HTTP clients & database connectors
+├── transformations/            # ETL transformation scripts
+│   ├── staging/                # Raw -> Cleaned Staging records
+│   └── warehouse/              # Staging -> Dimensional Fact & Dimension tables
+├── warehouse/                  # DDL scripts & database setup
+│   ├── dimensions/             # Dimension table definitions
+│   ├── facts/                  # Fact table definitions
+│   └── schemas/                # System initialization DDL (init_schema.sql)
+├── analytics/                  # Analytical SQL views for graphics engine
+├── graphics/                   # Automated PIL image generation scripts
+│   └── templates/              # Base graphic canvas layouts
+├── pipelines/                  # Airflow DAGs for end-to-end scheduling
+├── infrastructure/             # Containerization configs (Dockerfile, docker-compose)
+├── tests/                      # Pytest unit & data validation suite
+├── .gitignore                  # Git tracking rules
+├── requirements.txt            # Python dependencies
+└── README.md                   # Platform documentation
+```
