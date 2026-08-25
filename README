@@ -1,38 +1,57 @@
-# SA Football Data Platform
+# Kasi Pitchside
 
-An end-to-end data engineering platform designed to extract, process, model, and serve Premier Soccer League (PSL) analytics to drive automated sports content creation.
+### An end-to-end data engineering platform for PSL analytics and automated sports content creation
 
----
-
-## Overview
-
-The platform extracts raw match, fixture, and player logs directly from public PSL endpoints, standardizes raw payloads through a Medallion architecture, and loads clean data into a PostgreSQL dimensional warehouse built on Kimball modeling principles. Dedicated SQL analytical views compute complex metrics (such as form guides, rolling goal trends, and defense splits) to automatically feed Python graphics generation scripts.
+Extracts, processes, models, and serves Premier Soccer League (PSL) data — powering automated graphics and content pipelines from raw match data to polished visual assets.
 
 ---
 
-## Technical Stack
+##  Overview
 
-- **Language:** Python 3.11+
-- **Database Engine:** PostgreSQL 15+ (Production/Container) | SQLite (Local Fallback)
-- **Ingestion:** `httpx`, `BeautifulSoup4`, `Playwright`
-- **Data Transformation:** `SQLAlchemy 2.0`, `Pandas`
-- **Orchestration:** Apache Airflow
-- **Infrastructure:** Docker & Docker Compose
-- **Graphic Automation:** Python `Pillow`
+The platform extracts raw match, fixture, and player logs directly from public PSL endpoints, standardizes raw payloads through a **Medallion architecture**, and loads clean data into a **PostgreSQL dimensional warehouse** built on Kimball modeling principles.
+
+Dedicated SQL analytical views compute complex metrics — form guides, rolling goal trends, defense splits — that automatically feed Python graphics generation scripts, turning raw data into publish-ready content.
 
 ---
 
-## Architecture & Data Pipeline
+##  Technical Stack
 
-1. **Ingestion Layer (`ingestion/`):** Custom scrapers pull raw fixture calendars, live scores, and player match statistics via HTTP endpoints and browser automation.
-2. **Staging Layer (`transformations/staging/`):** Cleans raw payloads, handles missing attributes, converts timestamps, and loads standardized structures into the Bronze schema.
-3. **Warehouse Layer (`transformations/warehouse/`):** Normalizes cleaned records into Gold-standard Fact (`fact_matches`, `fact_player_stats`) and Dimension (`dim_clubs`, `dim_players`) tables.
-4. **Analytics Layer (`analytics/`):** SQL Window Functions and CTE views compute key metrics for visual cards (e.g., Last 5 Games Form, Home/Away splits, Clean Sheet totals).
-5. **Graphics Engine (`graphics/`):** Reads analytical views directly from PostgreSQL and renders customized PNG assets ready for automated posting.
+| Layer | Technology |
+|---|---|
+| **Language** | Python 3.11+ |
+| **Database Engine** | PostgreSQL 15+ (Production/Container) · SQLite (Local Fallback) |
+| **Ingestion** | `httpx`, `BeautifulSoup4`, `Playwright` |
+| **Data Transformation** | `SQLAlchemy 2.0`, `Pandas` |
+| **Orchestration** | Apache Airflow |
+| **Infrastructure** | Docker & Docker Compose |
+| **Graphic Automation** | Python `Pillow` |
 
 ---
 
-## Project Structure
+##  Architecture & Data Pipeline
+
+1. **Ingestion Layer** (`ingestion/`)
+   Custom scrapers pull raw fixture calendars, live scores, and player match statistics via HTTP endpoints and browser automation.
+
+2. **Staging Layer** (`transformations/staging/`)
+   Cleans raw payloads, handles missing attributes, converts timestamps, and loads standardized structures into the **Bronze** schema.
+
+3. **Warehouse Layer** (`transformations/warehouse/`)
+   Normalizes cleaned records into **Gold-standard** Fact (`fact_matches`, `fact_player_stats`) and Dimension (`dim_clubs`, `dim_players`) tables.
+
+4. **Analytics Layer** (`analytics/`)
+   SQL window functions and CTE views compute key metrics for visual cards — Last 5 Games Form, Home/Away splits, Clean Sheet totals.
+
+5. **Graphics Engine** (`graphics/`)
+   Reads analytical views directly from PostgreSQL and renders customized PNG assets, ready for automated posting.
+
+```
+Ingestion → Staging (Bronze) → Warehouse (Gold) → Analytics Views → Graphics Engine
+```
+
+---
+
+##  Project Structure
 
 ```text
 SA Football Data Platform/
@@ -57,3 +76,9 @@ SA Football Data Platform/
 ├── requirements.txt            # Python dependencies
 └── README.md                   # Platform documentation
 ```
+
+---
+
+## 🚀 Status
+
+_Add setup instructions, environment variables, and run commands here as the project matures._
