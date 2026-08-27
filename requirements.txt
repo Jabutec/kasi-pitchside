@@ -1,0 +1,9 @@
+# Data Fetching & Parsing
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Graphics Engine & Image Processing
+Pillow>=10.0.0
+
+# Quality & Testing
+pytest>=8.0.0
