@@ -40,7 +40,7 @@ Start with the square (1080×1080) as the primary rendered size; other sizes can
 ## Data-driven layout rules (for automation)
 
 - **Long names** (e.g. "Lamontville Golden Arrows"): auto-shrink font size or wrap to a second line — define one consistent rule, don't mix both
-- **Null/zero stats** (e.g. 0 assists): still render "0", don't omit the row — omitting looks like a data error, not an accurate zero
+- **Null/zero stats** (e.g. 0 assists): still render "0", don't omit the row
 - **Fewer than N items available** (e.g. "last 5 games" early in the season): render what's available and label it accurately (e.g. "Last 3 games" instead of forcing "Last 5")
 - **Missing player/team image**: fall back to a placeholder badge/silhouette rather than leaving blank space
 
