@@ -21,6 +21,7 @@ backups/
 
 # Environment Variables & Secrets
 .env
+.env.*
 .env.local
 .env.*.local
 
