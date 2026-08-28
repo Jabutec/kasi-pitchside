@@ -1,0 +1,29 @@
+{
+  "brand_name": "Kasi Pitchside",
+  "colors": {
+    "background": "#FFFFFF",
+    "primary_text": "#2B523F",
+    "accent_green": "#2B523F",
+    "win": "#2E7D32",
+    "draw": "#757575",
+    "loss": "#C62828"
+  },
+  "typography": {
+    "font_family": "Montserrat",
+    "weights": {
+      "heading": "Montserrat-SemiBold.ttf",
+      "subheading": "Montserrat-Medium.ttf",
+      "body": "Montserrat-Regular.ttf"
+    },
+    "sizes": {
+      "heading": 68,
+      "subheading": 34,
+      "body": 24,
+      "footer": 15
+    }
+  },
+  "layout": {
+    "default_canvas": [1080, 1080],
+    "safe_margin": 70
+  }
+}
