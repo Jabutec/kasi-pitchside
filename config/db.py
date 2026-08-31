@@ -1,8 +1,9 @@
-#Database Engine
+"""Database engine and session management"""
 
 import logging
 from contextlib import contextmanager
 from typing import Generator
+from sqlalchemy.pool import NullPool
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
@@ -12,6 +13,7 @@ from config.settings import (
     DB_MAX_OVERFLOW,
     DB_POOL_RECYCLE,
     DB_POOL_SIZE,
+    DB_POOL_TIMEOUT,
 )
 
 logger = logging.getLogger(__name__)
@@ -22,8 +24,9 @@ def _create_engine(db_url: str):
     if db_url.startswith("sqlite"):
         return create_engine(
             db_url,
+            poolclass=NullPool,   # PgBouncer already pools — don't double-pool
+            pool_pre_ping=True,
             echo=False,
-            connect_args={"check_same_thread": False},
         )
     return create_engine(
         db_url,
@@ -31,6 +34,7 @@ def _create_engine(db_url: str):
         max_overflow=DB_MAX_OVERFLOW,
         pool_recycle=DB_POOL_RECYCLE,
         pool_pre_ping=True,
+        pool_timeout=DB_POOL_TIMEOUT,
         echo=False,
     )
 
@@ -52,3 +56,16 @@ def get_session() -> Generator[Session, None, None]:
         raise
     finally:
         session.close()
+
+
+def dispose_engine() -> None:
+    """
+    Close all pooled connections and dispose of the engine.
+
+    ADDED: no clean shutdown path existed before. Matters once this
+    runs as a long-lived scheduler/daemon rather than one-shot scripts —
+    call this on graceful shutdown (SIGTERM handler, `atexit`, etc.)
+    so pooled connections aren't left open against the DB server.
+    """
+    engine.dispose()
+    logger.info("Database engine disposed")

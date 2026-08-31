@@ -3,6 +3,7 @@
 import logging
 from typing import Any, Dict, List, Optional
 
+from sqlalchemy import func
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 from sqlalchemy.dialects.sqlite import insert as sqlite_insert
 from sqlalchemy.orm import Session
@@ -26,6 +27,11 @@ class WarehouseCRUD:
     def __init__(self, session: Session):
         self.session = session
 
+    def _insert_fn(self):
+        """Pick the right dialect-specific insert() for the bound engine."""
+        bind = self.session.get_bind()
+        return sqlite_insert if bind.dialect.name == "sqlite" else pg_insert
+
     # Dimensions
     def get_or_create_team(self, name: str, short_code: Optional[str] = None) -> Team:
         team = self.session.query(Team).filter_by(name=name).first()
@@ -40,17 +46,29 @@ class WarehouseCRUD:
     def get_or_create_player(
         self, name: str, team_id: int, position: Optional[str] = None
     ) -> Player:
+        """
+        Get-or-create backed by the DB-level UniqueConstraint on
+        (name, team_id) — see models.py fix. FIX: previously this was a
+        plain check-then-insert with no DB constraint behind it, so two
+        concurrent jobs (e.g. the live poller and a backfill running at
+        the same time) creating the same new player could silently
+        produce two rows. Using on_conflict_do_nothing + re-select closes
+        that race — the constraint, not application timing, decides.
+        """
+        insert_fn = self._insert_fn()
+        stmt = (
+            insert_fn(Player)
+            .values(name=name, team_id=team_id, position=position)
+            .on_conflict_do_nothing(index_elements=["name", "team_id"])
+        )
+        self.session.execute(stmt)
+        self.session.flush()
+
         player = (
             self.session.query(Player)
             .filter_by(name=name, team_id=team_id)
-            .first()
+            .one()
         )
-        if player:
-            return player
-        player = Player(name=name, team_id=team_id, position=position)
-        self.session.add(player)
-        self.session.flush()
-        logger.info(f"Created player: {name} (id={player.id})")
         return player
 
     def get_or_create_season(self, name: str) -> Season:
@@ -76,8 +94,7 @@ class WarehouseCRUD:
     # Facts — upsert
     def upsert_match(self, match_data: Dict[str, Any]) -> Match:
         """Upsert MATCH on natural key, compatible with both PostgreSQL & SQLite engines."""
-        bind = self.session.get_bind()
-        insert_fn = sqlite_insert if bind.dialect.name == "sqlite" else pg_insert
+        insert_fn = self._insert_fn()
 
         stmt = (
             insert_fn(Match)
@@ -96,6 +113,7 @@ class WarehouseCRUD:
                     "home_score": match_data.get("home_score"),
                     "away_score": match_data.get("away_score"),
                     "status": match_data.get("status"),
+                    "updated_at": func.now(),
                 },
             )
         )
@@ -117,8 +135,7 @@ class WarehouseCRUD:
 
     def upsert_player_stat(self, stat_data: Dict[str, Any]) -> None:
         """Upsert PLAYER_MATCH_STAT on (match_id, player_id) for PostgreSQL & SQLite."""
-        bind = self.session.get_bind()
-        insert_fn = sqlite_insert if bind.dialect.name == "sqlite" else pg_insert
+        insert_fn = self._insert_fn()
 
         stmt = (
             insert_fn(PlayerMatchStat)
@@ -135,6 +152,9 @@ class WarehouseCRUD:
                     "saves": stat_data.get("saves", 0),
                     "goals_conceded": stat_data.get("goals_conceded", 0),
                     "clean_sheet": stat_data.get("clean_sheet", False),
+                    "yellow_cards": stat_data.get("yellow_cards", 0),
+                    "red_cards": stat_data.get("red_cards", 0),
+                    "updated_at": func.now(),
                 },
             )
         )
@@ -143,10 +163,10 @@ class WarehouseCRUD:
             f"Upserted player stat: match={stat_data['match_id']}, "
             f"player={stat_data['player_id']}"
         )
+
     def insert_standing_snapshot(self, snapshot_data: Dict[str, Any]) -> bool:
         """Insert STANDING_SNAPSHOT. Automatically ignores duplicates at the DB level."""
-        bind = self.session.get_bind()
-        insert_fn = sqlite_insert if bind.dialect.name == "sqlite" else pg_insert
+        insert_fn = self._insert_fn()
 
         stmt = (
             insert_fn(StandingSnapshot)
@@ -156,7 +176,7 @@ class WarehouseCRUD:
             )
         )
         result = self.session.execute(stmt)
-        
+
         if result.rowcount == 0:
             logger.warning(
                 f"Skipped duplicate standing snapshot: "

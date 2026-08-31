@@ -8,7 +8,6 @@ _env_path = Path(__file__).parent.parent / ".env"
 load_dotenv(dotenv_path=_env_path)
 
 
-
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent.resolve()
 
@@ -21,18 +20,17 @@ WAREHOUSE_DIR = PROJECT_ROOT / "warehouse"
 
 SQLITE_PATH = WAREHOUSE_DIR / "local_dev.db"
 
+
 def init_directories() -> None:
     """Create runtime directories. Call once at startup — never at import time."""
     for d in (RAW_DIR, LOG_DIR, OUTPUT_DIR, BACKUP_DIR, LOOKUPS_DIR, WAREHOUSE_DIR):
         d.mkdir(parents=True, exist_ok=True)
 
 
-
 # Database
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    # Default: local Docker Compose stack via PgBouncer
-    "postgresql://kasi-pitchside:pitchside2026@localhost:6432/psl_warehouse",
+    "postgresql://changeme_user:changeme_password@localhost:5432/psl_warehouse",
 )
 
 
@@ -40,6 +38,10 @@ DATABASE_URL = os.getenv(
 DB_POOL_SIZE = int(os.getenv("DB_POOL_SIZE", "5"))
 DB_MAX_OVERFLOW = int(os.getenv("DB_MAX_OVERFLOW", "10"))
 DB_POOL_RECYCLE = int(os.getenv("DB_POOL_RECYCLE", "3600"))
+# ADDED: was hardcoded directly in db.py (pool_timeout=30), breaking the
+# pattern used by every other pool setting here. Now configurable like
+# the rest, with the same default.
+DB_POOL_TIMEOUT = int(os.getenv("DB_POOL_TIMEOUT", "30"))
 
 
 # Source orchestration

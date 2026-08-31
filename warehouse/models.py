@@ -7,6 +7,7 @@ from sqlalchemy import (
     Date,
     DateTime,
     ForeignKey,
+    Index,
     Integer,
     String,
     Time,
@@ -37,7 +38,7 @@ class Venue(Base):
     __tablename__ = "venue"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    name: Mapped[str] = mapped_column(String(100), nullable=False)
+    name: Mapped[str] = mapped_column(String(100), nullable=False, unique=True)
     city: Mapped[Optional[str]] = mapped_column(String(100))
 
     matches: Mapped[List["Match"]] = relationship(back_populates="venue")
@@ -47,15 +48,15 @@ class Team(Base):
     __tablename__ = "team"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    name: Mapped[str] = mapped_column(String(100), nullable=False)
+    name: Mapped[str] = mapped_column(String(100), nullable=False, unique=True)
     short_code: Mapped[Optional[str]] = mapped_column(String(10))
 
     players: Mapped[List["Player"]] = relationship(back_populates="team")
     home_matches: Mapped[List["Match"]] = relationship(
-        foreign_keys=["Match.home_team_id"], back_populates="home_team"
+        foreign_keys="Match.home_team_id", back_populates="home_team"
     )
     away_matches: Mapped[List["Match"]] = relationship(
-        foreign_keys=["Match.away_team_id"], back_populates="away_team"
+        foreign_keys="Match.away_team_id", back_populates="away_team"
     )
     snapshots: Mapped[List["StandingSnapshot"]] = relationship(
         back_populates="team"
@@ -69,14 +70,15 @@ class Player(Base):
             "position IN ('GK', 'DEF', 'MID', 'FWD')",
             name="ck_player_position",
         ),
+        UniqueConstraint("name", "team_id", name="uq_player_team"),
     )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    team_id: Mapped[int] = mapped_column(ForeignKey("team.id"), nullable=False)
+    team_id: Mapped[int] = mapped_column(
+        ForeignKey("team.id", ondelete="RESTRICT"), nullable=False
+    )
     name: Mapped[str] = mapped_column(String(100), nullable=False)
     position: Mapped[Optional[str]] = mapped_column(String(10))
-    yellow_card: Mapped[int] = mapped_column(Integer, default=0)
-    red_card: Mapped[int] = mapped_column(Integer, default=0)
 
     team: Mapped["Team"] = relationship(back_populates="players")
     stats: Mapped[List["PlayerMatchStat"]] = relationship(
@@ -92,18 +94,30 @@ class Match(Base):
             "season_id", "home_team_id", "away_team_id", "matchday",
             name="uix_match_natural_key",
         ),
+        CheckConstraint(
+            "home_team_id != away_team_id", name="ck_match_teams_differ"
+        ),
+        CheckConstraint(
+            "status IN ('scheduled', 'live', 'full-time', 'postponed')",
+            name="ck_match_status",
+        ),
+        Index("idx_match_home_team", "home_team_id"),
+        Index("idx_match_away_team", "away_team_id"),
+        Index("idx_match_date", "match_date"),
     )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     season_id: Mapped[int] = mapped_column(
-        ForeignKey("season.id"), nullable=False
+        ForeignKey("season.id", ondelete="CASCADE"), nullable=False
     )
-    venue_id: Mapped[Optional[int]] = mapped_column(ForeignKey("venue.id"))
+    venue_id: Mapped[Optional[int]] = mapped_column(
+        ForeignKey("venue.id", ondelete="SET NULL")
+    )
     home_team_id: Mapped[int] = mapped_column(
-        ForeignKey("team.id"), nullable=False
+        ForeignKey("team.id", ondelete="RESTRICT"), nullable=False
     )
     away_team_id: Mapped[int] = mapped_column(
-        ForeignKey("team.id"), nullable=False
+        ForeignKey("team.id", ondelete="RESTRICT"), nullable=False
     )
     match_date: Mapped[date] = mapped_column(Date, nullable=False)
     kickoff_time: Mapped[Optional[time]] = mapped_column(Time)
@@ -143,13 +157,13 @@ class PlayerMatchStat(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     match_id: Mapped[int] = mapped_column(
-        ForeignKey("match.id"), nullable=False
+        ForeignKey("match.id", ondelete="CASCADE"), nullable=False
     )
     player_id: Mapped[int] = mapped_column(
-        ForeignKey("player.id"), nullable=False
+        ForeignKey("player.id", ondelete="CASCADE"), nullable=False
     )
     team_id: Mapped[int] = mapped_column(
-        ForeignKey("team.id"), nullable=False
+        ForeignKey("team.id", ondelete="RESTRICT"), nullable=False
     )
     goals: Mapped[int] = mapped_column(Integer, default=0)
     assists: Mapped[int] = mapped_column(Integer, default=0)
@@ -159,6 +173,14 @@ class PlayerMatchStat(Base):
     saves: Mapped[int] = mapped_column(Integer, default=0)
     goals_conceded: Mapped[int] = mapped_column(Integer, default=0)
     clean_sheet: Mapped[bool] = mapped_column(Boolean, default=False)
+    yellow_cards: Mapped[int] = mapped_column(Integer, default=0)
+    red_cards: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[DateTime] = mapped_column(
+        DateTime, server_default=func.now()
+    )
+    updated_at: Mapped[DateTime] = mapped_column(
+        DateTime, server_default=func.now(), onupdate=func.now()
+    )
 
     match: Mapped["Match"] = relationship(back_populates="player_stats")
     player: Mapped["Player"] = relationship(back_populates="stats")
@@ -171,14 +193,15 @@ class StandingSnapshot(Base):
             "season_id", "team_id", "matchday",
             name="uix_standing_natural_key",
         ),
+        Index("idx_standing_snapshot_season_matchday", "season_id", "matchday"),
     )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     season_id: Mapped[int] = mapped_column(
-        ForeignKey("season.id"), nullable=False
+        ForeignKey("season.id", ondelete="CASCADE"), nullable=False
     )
     team_id: Mapped[int] = mapped_column(
-        ForeignKey("team.id"), nullable=False
+        ForeignKey("team.id", ondelete="CASCADE"), nullable=False
     )
     matchday: Mapped[int] = mapped_column(Integer, nullable=False)
     position: Mapped[int] = mapped_column(Integer, nullable=False)
@@ -187,8 +210,9 @@ class StandingSnapshot(Base):
     wins: Mapped[int] = mapped_column(Integer, default=0)
     draws: Mapped[int] = mapped_column(Integer, default=0)
     losses: Mapped[int] = mapped_column(Integer, default=0)
+    goals_for: Mapped[int] = mapped_column(Integer, default=0)
+    goals_against: Mapped[int] = mapped_column(Integer, default=0)
     goal_difference: Mapped[int] = mapped_column(Integer, default=0)
     recorded_date: Mapped[date] = mapped_column(Date, nullable=False)
-
     season: Mapped["Season"] = relationship(back_populates="snapshots")
     team: Mapped["Team"] = relationship(back_populates="snapshots")
