@@ -1,0 +1,554 @@
+[
+  {
+    "date": "04 Sep 2026",
+    "home_team": "Marumo Gallants",
+    "away_team": "Polokwane City",
+    "time": "19:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Sep 2026",
+    "home_team": "Chippa United",
+    "away_team": "Milford FC",
+    "time": "15:00",
+    "venue": "Dobsonville Stadium, Soweto, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Sep 2026",
+    "home_team": "Golden Arrows",
+    "away_team": "Mamelodi Sundowns",
+    "time": "15:00",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 Sep 2026",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Siwelele",
+    "time": "19:30",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "11 Sep 2026",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Sekhukhune United",
+    "time": "19:30",
+    "venue": "Athlone Stadium, Cape Town",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "12 Sep 2026",
+    "home_team": "AmaZulu FC",
+    "away_team": "Marumo Gallants",
+    "time": "15:00",
+    "venue": "Princess Magogo Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Sep 2026",
+    "home_team": "Milford FC",
+    "away_team": "Richards Bay",
+    "time": "15:00",
+    "venue": "Sugar Ray Xulu Stadium, Clermont",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Sep 2026",
+    "home_team": "Orlando Pirates",
+    "away_team": "Durban City",
+    "time": "19:30",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "19 Sep 2026",
+    "home_team": "Richards Bay",
+    "away_team": "Sekhukhune United",
+    "time": "15:00",
+    "venue": "Princess Magogo Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "20 Sep 2026",
+    "home_team": "Milford FC",
+    "away_team": "Durban City",
+    "time": "15:00",
+    "venue": "Sugar Ray Xulu Stadium, Clermont",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Oct 2026",
+    "home_team": "Durban City",
+    "away_team": "AmaZulu FC",
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Oct 2026",
+    "home_team": "Chippa United",
+    "away_team": "Kruger United",
+    "time": "15:30",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "18 Oct 2026",
+    "home_team": "Siwelele",
+    "away_team": "Polokwane City",
+    "time": "15:30",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "30 Oct 2026",
+    "home_team": "Marumo Gallants",
+    "away_team": "Siwelele",
+    "time": "19:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "31 Oct 2026",
+    "home_team": "Orlando Pirates",
+    "away_team": "Kaizer Chiefs",
+    "time": "15:30",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "01 Nov 2026",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Durban City",
+    "time": "15:30",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "04 Nov 2026",
+    "home_team": "Chippa United",
+    "away_team": "Sekhukhune United",
+    "time": "19:30",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Nov 2026",
+    "home_team": "Durban City",
+    "away_team": "Polokwane City",
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Nov 2026",
+    "home_team": "AmaZulu FC",
+    "away_team": "Milford FC",
+    "time": "15:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "29 Nov 2026",
+    "home_team": "Marumo Gallants",
+    "away_team": "Richards Bay",
+    "time": "15:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "04 Dec 2026",
+    "home_team": "Marumo Gallants",
+    "away_team": "Chippa United",
+    "time": "19:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Dec 2026",
+    "home_team": "Golden Arrows",
+    "away_team": "Kruger United",
+    "time": "15:30",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Dec 2026",
+    "home_team": "Siwelele",
+    "away_team": "Durban City",
+    "time": "15:30",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 Dec 2026",
+    "home_team": "Chippa United",
+    "away_team": "AmaZulu FC",
+    "time": "19:30",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Dec 2026",
+    "home_team": "Richards Bay",
+    "away_team": "Orlando Pirates",
+    "time": "15:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "18 Dec 2026",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Mamelodi Sundowns",
+    "time": "19:30",
+    "venue": "DHL Cape Town Stadium, Cape Town",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "19 Dec 2026",
+    "home_team": "Marumo Gallants",
+    "away_team": "Kaizer Chiefs",
+    "time": "15:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "20 Dec 2026",
+    "home_team": "Richards Bay",
+    "away_team": "Siwelele",
+    "time": "15:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "08 Jan 2027",
+    "home_team": "Milford FC",
+    "away_team": "Marumo Gallants",
+    "time": "19:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 Jan 2027",
+    "home_team": "Kruger United",
+    "away_team": "Sekhukhune United",
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "10 Jan 2027",
+    "home_team": "AmaZulu FC",
+    "away_team": "TS Galaxy",
+    "time": "15:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 Jan 2027",
+    "home_team": "Richards Bay",
+    "away_team": "Durban City",
+    "time": "19:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Jan 2027",
+    "home_team": "Chippa United",
+    "away_team": "Golden Arrows",
+    "time": "15:30",
+    "venue": "Nelson Mandela Bay Stadium, Gqeberha",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Jan 2027",
+    "home_team": "Sekhukhune United",
+    "away_team": "Kaizer Chiefs",
+    "time": "15:30",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 Jan 2027",
+    "home_team": "Marumo Gallants",
+    "away_team": "Sekhukhune United",
+    "time": "19:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "23 Jan 2027",
+    "home_team": "AmaZulu FC",
+    "away_team": "Stellenbosch FC",
+    "time": "15:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "24 Jan 2027",
+    "home_team": "TS Galaxy",
+    "away_team": "Polokwane City",
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Feb 2027",
+    "home_team": "Durban City",
+    "away_team": "TS Galaxy",
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Feb 2027",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Kaizer Chiefs",
+    "time": "15:30",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "07 Feb 2027",
+    "home_team": "Richards Bay",
+    "away_team": "Chippa United",
+    "time": "15:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "12 Feb 2027",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Richards Bay",
+    "time": "19:30",
+    "venue": "Danie Craven Stadium, Stellenbosch",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Feb 2027",
+    "home_team": "Chippa United",
+    "away_team": "TS Galaxy",
+    "time": "15:30",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "14 Feb 2027",
+    "home_team": "AmaZulu FC",
+    "away_team": "Kaizer Chiefs",
+    "time": "15:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "26 Feb 2027",
+    "home_team": "Durban City",
+    "away_team": "Orlando Pirates",
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Feb 2027",
+    "home_team": "Golden Arrows",
+    "away_team": "AmaZulu FC",
+    "time": "15:30",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Feb 2027",
+    "home_team": "TS Galaxy",
+    "away_team": "Marumo Gallants",
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Mar 2027",
+    "home_team": "Richards Bay",
+    "away_team": "Marumo Gallants",
+    "time": "19:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Mar 2027",
+    "home_team": "Kruger United",
+    "away_team": "Milford FC",
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "07 Mar 2027",
+    "home_team": "TS Galaxy",
+    "away_team": "Kaizer Chiefs",
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "12 Mar 2027",
+    "home_team": "AmaZulu FC",
+    "away_team": "Polokwane City",
+    "time": "19:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Mar 2027",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Orlando Pirates",
+    "time": "15:30",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "14 Mar 2027",
+    "home_team": "Marumo Gallants",
+    "away_team": "Mamelodi Sundowns",
+    "time": "18:00",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Mar 2027",
+    "home_team": "Milford FC",
+    "away_team": "Polokwane City",
+    "time": "19:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Mar 2027",
+    "home_team": "Chippa United",
+    "away_team": "Marumo Gallants",
+    "time": "19:30",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 Apr 2027",
+    "home_team": "Durban City",
+    "away_team": "Sekhukhune United",
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "10 Apr 2027",
+    "home_team": "AmaZulu FC",
+    "away_team": "Chippa United",
+    "time": "15:00",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "11 Apr 2027",
+    "home_team": "TS Galaxy",
+    "away_team": "Orlando Pirates",
+    "time": "15:00",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Apr 2027",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Golden Arrows",
+    "time": "19:30",
+    "venue": "Danie Craven Stadium, Stellenbosch",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Apr 2027",
+    "home_team": "AmaZulu FC",
+    "away_team": "Richards Bay",
+    "time": "15:00",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "18 Apr 2027",
+    "home_team": "Polokwane City",
+    "away_team": "Durban City",
+    "time": "15:00",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "23 Apr 2027",
+    "home_team": "Durban City",
+    "away_team": "Kaizer Chiefs",
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "24 Apr 2027",
+    "home_team": "Chippa United",
+    "away_team": "Polokwane City",
+    "time": "15:00",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "25 Apr 2027",
+    "home_team": "Siwelele",
+    "away_team": "Kruger United",
+    "time": "15:00",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Apr 2027",
+    "home_team": "AmaZulu FC",
+    "away_team": "Sekhukhune United",
+    "time": "19:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Apr 2027",
+    "home_team": "Durban City",
+    "away_team": "Siwelele",
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "08 May 2027",
+    "home_team": "Chippa United",
+    "away_team": "Stellenbosch FC",
+    "time": "15:00",
+    "venue": "Nelson Mandela Bay Stadium, Gqeberha",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 May 2027",
+    "home_team": "Sekhukhune United",
+    "away_team": "Richards Bay",
+    "time": "15:00",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 May 2027",
+    "home_team": "Golden Arrows",
+    "away_team": "Polokwane City",
+    "time": "15:00",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 May 2027",
+    "home_team": "AmaZulu FC",
+    "away_team": "Mamelodi Sundowns",
+    "time": "15:00",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  }
+]
