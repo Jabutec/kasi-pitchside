@@ -4,14 +4,16 @@ backup.py — automated PostgreSQL backups with rotation.
 
 import argparse
 import logging
+import os
 import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from config.settings import BACKUP_DIR, BACKUP_RETENTION_DAYS, POSTGRES_DB, POSTGRES_USER
+from config.settings import BACKUP_DIR, BACKUP_RETENTION_DAYS, DATABASE_URL
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
@@ -19,21 +21,29 @@ logger = logging.getLogger(__name__)
 CONTAINER_NAME = "kasipitchside_postgres"
 
 
+def _get_db_credentials() -> tuple[str, str]:
+    """Extract postgres user and db name from DATABASE_URL or environment."""
+    parsed = urlparse(DATABASE_URL)
+    user = parsed.username or os.getenv("POSTGRES_USER", "postgres")
+    db_name = parsed.path.lstrip("/") or os.getenv("POSTGRES_DB", "kasipitchside")
+    return user, db_name
+
+
 def take_backup() -> Path:
     """Run pg_dump inside the Postgres container, write output to BACKUP_DIR."""
     BACKUP_DIR.mkdir(parents=True, exist_ok=True)
 
+    user, db_name = _get_db_credentials()
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     backup_file = BACKUP_DIR / f"psl_warehouse_{timestamp}.sql"
 
     logger.info(f"Starting backup -> {backup_file}")
 
-    
     cmd = [
         "docker", "exec", CONTAINER_NAME,
         "pg_dump",
-        "-U", POSTGRES_USER,
-        "-d", POSTGRES_DB,
+        "-U", user,
+        "-d", db_name,
         "-Fp",
     ]
 

@@ -3,10 +3,10 @@
 import logging
 from contextlib import contextmanager
 from typing import Generator
-from sqlalchemy.pool import NullPool
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
+from sqlalchemy.pool import NullPool
 
 from config.settings import (
     DATABASE_URL,
@@ -20,14 +20,29 @@ logger = logging.getLogger(__name__)
 
 
 def _create_engine(db_url: str):
-    """Create engine with appropriate config for PostgreSQL or SQLite."""
+    """Create engine configured correctly for SQLite, Direct Postgres, or PgBouncer."""
     if db_url.startswith("sqlite"):
         return create_engine(
             db_url,
-            poolclass=NullPool,   # PgBouncer already pools — don't double-pool
-            pool_pre_ping=True,
+            connect_args={"check_same_thread": False} if ":memory:" in db_url else {},
             echo=False,
         )
+
+    # Check if connecting through PgBouncer (default port 6432)
+    is_pgbouncer = ":6432" in db_url or "pgbouncer" in db_url
+
+    if is_pgbouncer:
+        # Transaction-mode PgBouncer: Use NullPool and disable client-side prepared statements
+        return create_engine(
+            db_url,
+            poolclass=NullPool,
+            connect_args={
+                "prepare_threshold": None  # Disables prepared statements for psycopg3 / asyncpg compatibility
+            },
+            echo=False,
+        )
+
+    # Direct PostgreSQL connection
     return create_engine(
         db_url,
         pool_size=DB_POOL_SIZE,
@@ -59,13 +74,6 @@ def get_session() -> Generator[Session, None, None]:
 
 
 def dispose_engine() -> None:
-    """
-    Close all pooled connections and dispose of the engine.
-
-    ADDED: no clean shutdown path existed before. Matters once this
-    runs as a long-lived scheduler/daemon rather than one-shot scripts —
-    call this on graceful shutdown (SIGTERM handler, `atexit`, etc.)
-    so pooled connections aren't left open against the DB server.
-    """
+    """Close all pooled connections and dispose of the engine cleanly."""
     engine.dispose()
     logger.info("Database engine disposed")

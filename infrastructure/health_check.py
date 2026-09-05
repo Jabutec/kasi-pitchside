@@ -1,6 +1,4 @@
-"""
-health_check.py — checks disk space, DB connectivity, and backup freshness.
-"""
+"""health_check.py — checks disk space, DB connectivity, and backup freshness."""
 
 import argparse
 import json
@@ -14,9 +12,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from config.settings import BACKUP_DIR, DATABASE_URL, PROJECT_ROOT
 
-DISK_WARNING_THRESHOLD_PCT = 85  
-BACKUP_STALE_HOURS = 30          
-                                
+DISK_WARNING_THRESHOLD_PCT = 85
+BACKUP_STALE_HOURS = 30
 
 
 @dataclass
@@ -39,7 +36,9 @@ def check_disk_space() -> CheckResult:
 def check_database_connectivity() -> CheckResult:
     try:
         from sqlalchemy import create_engine, text
-        engine = create_engine(DATABASE_URL, pool_pre_ping=True)
+        from sqlalchemy.pool import NullPool
+
+        engine = create_engine(DATABASE_URL, poolclass=NullPool)
         with engine.connect() as conn:
             conn.execute(text("SELECT 1"))
         engine.dispose()
