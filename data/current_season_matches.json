@@ -1,0 +1,2063 @@
+[
+  {
+    "date": "05 Sep",
+    "home_team": "Chippa United",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "15:00",
+    "venue": "Dobsonville Stadium, Soweto, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Sep",
+    "home_team": "Sekhukhune United",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "17:30",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Sep",
+    "home_team": "Golden Arrows",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "15:00",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Sep",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "17:30",
+    "venue": "Dobsonville Stadium, Soweto, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 Sep",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "19:30",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "11 Sep",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Athlone Stadium, Cape Town",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "12 Sep",
+    "home_team": "AmaZulu FC",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "15:00",
+    "venue": "Princess Magogo Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "12 Sep",
+    "home_team": "Polokwane City",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "15:00",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "12 Sep",
+    "home_team": "Chippa United",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "17:30",
+    "venue": "Nelson Mandela Bay Stadium, Gqeberha",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Sep",
+    "home_team": "Milford FC",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "15:00",
+    "venue": "Sugar Ray Xulu Stadium, Clermont",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Sep",
+    "home_team": "Siwelele",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "15:00",
+    "venue": "Free State Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Sep",
+    "home_team": "TS Galaxy",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "17:30",
+    "venue": "Solomon Mahlangu Stadium, KwaMhlanga",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Sep",
+    "home_team": "Orlando Pirates",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "19:30",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "19 Sep",
+    "home_team": "Richards Bay",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "15:00",
+    "venue": "Princess Magogo Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "19 Sep",
+    "home_team": "Golden Arrows",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "15:00",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "19 Sep",
+    "home_team": "Polokwane City",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "17:30",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "19 Sep",
+    "home_team": "Kruger United",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "20:00",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "20 Sep",
+    "home_team": "Milford FC",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "15:00",
+    "venue": "Sugar Ray Xulu Stadium, Clermont",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "20 Sep",
+    "home_team": "Marumo Gallants",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "15:00",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "20 Sep",
+    "home_team": "TS Galaxy",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "17:30",
+    "venue": "Solomon Mahlangu Stadium, KwaMhlanga",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Oct",
+    "home_team": "Durban City",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Oct",
+    "home_team": "Chippa United",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "15:30",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Oct",
+    "home_team": "Golden Arrows",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "15:30",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Oct",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "15:30",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Oct",
+    "home_team": "Sekhukhune United",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "18:00",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Oct",
+    "home_team": "Richards Bay",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "20:15",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "18 Oct",
+    "home_team": "Siwelele",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "15:30",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "18 Oct",
+    "home_team": "Orlando Pirates",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "18:00",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "30 Oct",
+    "home_team": "Marumo Gallants",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "19:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "30 Oct",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Danie Craven Stadium, Stellenbosch",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "31 Oct",
+    "home_team": "Orlando Pirates",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "15:30",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "31 Oct",
+    "home_team": "AmaZulu FC",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "18:00",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "31 Oct",
+    "home_team": "Polokwane City",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "18:00",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "31 Oct",
+    "home_team": "Kruger United",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "20:15",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "01 Nov",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "15:30",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "01 Nov",
+    "home_team": "Milford FC",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "18:00",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "04 Nov",
+    "home_team": "Chippa United",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "04 Nov",
+    "home_team": "Golden Arrows",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "19:30",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "04 Nov",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "19:30",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "04 Nov",
+    "home_team": "Polokwane City",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "04 Nov",
+    "home_team": "Richards Bay",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "19:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "04 Nov",
+    "home_team": "Siwelele",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "19:30",
+    "venue": "Free State Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "04 Nov",
+    "home_team": "TS Galaxy",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "19:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Nov",
+    "home_team": "Durban City",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Nov",
+    "home_team": "Stellenbosch FC",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "19:30",
+    "venue": "Danie Craven Stadium, Stellenbosch",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Nov",
+    "home_team": "AmaZulu FC",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "15:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Nov",
+    "home_team": "Chippa United",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "15:30",
+    "venue": "Nelson Mandela Bay Stadium, Gqeberha",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Nov",
+    "home_team": "Orlando Pirates",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "18:00",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Nov",
+    "home_team": "Kruger United",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "20:15",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "29 Nov",
+    "home_team": "Marumo Gallants",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "15:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "29 Nov",
+    "home_team": "Sekhukhune United",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "18:00",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "04 Dec",
+    "home_team": "Marumo Gallants",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Dec",
+    "home_team": "Golden Arrows",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "15:30",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Dec",
+    "home_team": "Orlando Pirates",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "15:30",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Dec",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "18:00",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Dec",
+    "home_team": "Sekhukhune United",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "18:00",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Dec",
+    "home_team": "Milford FC",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "20:15",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Dec",
+    "home_team": "Siwelele",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "15:30",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Dec",
+    "home_team": "TS Galaxy",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 Dec",
+    "home_team": "Chippa United",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "19:30",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 Dec",
+    "home_team": "Durban City",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 Dec",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "19:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 Dec",
+    "home_team": "Kruger United",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "19:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 Dec",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 Dec",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "19:30",
+    "venue": "Danie Craven Stadium, Stellenbosch",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Dec",
+    "home_team": "Richards Bay",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "15:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Dec",
+    "home_team": "Polokwane City",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "18:00",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "18 Dec",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "19:30",
+    "venue": "DHL Cape Town Stadium, Cape Town",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "19 Dec",
+    "home_team": "Marumo Gallants",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "15:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "19 Dec",
+    "home_team": "Sekhukhune United",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "15:30",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "19 Dec",
+    "home_team": "AmaZulu FC",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "18:00",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "19 Dec",
+    "home_team": "Orlando Pirates",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "20:15",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "20 Dec",
+    "home_team": "Richards Bay",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "15:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "20 Dec",
+    "home_team": "TS Galaxy",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "20 Dec",
+    "home_team": "Durban City",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "18:00",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "08 Jan",
+    "home_team": "Milford FC",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "19:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 Jan",
+    "home_team": "Kruger United",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 Jan",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "15:30",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 Jan",
+    "home_team": "Polokwane City",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "15:30",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 Jan",
+    "home_team": "Golden Arrows",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "18:00",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "10 Jan",
+    "home_team": "AmaZulu FC",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "15:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "10 Jan",
+    "home_team": "Siwelele",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "15:30",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "10 Jan",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "18:00",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 Jan",
+    "home_team": "Richards Bay",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "19:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Jan",
+    "home_team": "Chippa United",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "15:30",
+    "venue": "Nelson Mandela Bay Stadium, Gqeberha",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Jan",
+    "home_team": "Kruger United",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Jan",
+    "home_team": "Orlando Pirates",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "15:30",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Jan",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "18:00",
+    "venue": "Danie Craven Stadium, Stellenbosch",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Jan",
+    "home_team": "Milford FC",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "20:15",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Jan",
+    "home_team": "Sekhukhune United",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "15:30",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Jan",
+    "home_team": "TS Galaxy",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "18:00",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 Jan",
+    "home_team": "Marumo Gallants",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 Jan",
+    "home_team": "Orlando Pirates",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "23 Jan",
+    "home_team": "AmaZulu FC",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "15:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "23 Jan",
+    "home_team": "Golden Arrows",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "15:30",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "23 Jan",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "15:30",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "23 Jan",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "18:00",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "23 Jan",
+    "home_team": "Durban City",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "20:15",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "24 Jan",
+    "home_team": "TS Galaxy",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Feb",
+    "home_team": "Durban City",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Feb",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "15:30",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Feb",
+    "home_team": "Polokwane City",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "15:30",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Feb",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "18:00",
+    "venue": "Danie Craven Stadium, Stellenbosch",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Feb",
+    "home_team": "Milford FC",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "20:15",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "07 Feb",
+    "home_team": "Richards Bay",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "15:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "07 Feb",
+    "home_team": "Siwelele",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "15:30",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "07 Feb",
+    "home_team": "Golden Arrows",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "18:00",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "12 Feb",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "19:30",
+    "venue": "Danie Craven Stadium, Stellenbosch",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Feb",
+    "home_team": "Chippa United",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "15:30",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Feb",
+    "home_team": "Kruger United",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Feb",
+    "home_team": "Orlando Pirates",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "15:30",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Feb",
+    "home_team": "Sekhukhune United",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "18:00",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Feb",
+    "home_team": "Milford FC",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "20:15",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "14 Feb",
+    "home_team": "AmaZulu FC",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "15:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "14 Feb",
+    "home_team": "Marumo Gallants",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "18:00",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "26 Feb",
+    "home_team": "Durban City",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "26 Feb",
+    "home_team": "Richards Bay",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Feb",
+    "home_team": "Golden Arrows",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "15:30",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Feb",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "15:30",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Feb",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "18:00",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Feb",
+    "home_team": "Sekhukhune United",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "20:15",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Feb",
+    "home_team": "TS Galaxy",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Feb",
+    "home_team": "Siwelele",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "18:00",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "05 Mar",
+    "home_team": "Richards Bay",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "19:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Mar",
+    "home_team": "Kruger United",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Mar",
+    "home_team": "Orlando Pirates",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "15:30",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Mar",
+    "home_team": "Polokwane City",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "15:30",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Mar",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "18:00",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "06 Mar",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "20:15",
+    "venue": "Danie Craven Stadium, Stellenbosch",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "07 Mar",
+    "home_team": "TS Galaxy",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "15:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "07 Mar",
+    "home_team": "AmaZulu FC",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "18:00",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "12 Mar",
+    "home_team": "AmaZulu FC",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "19:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Mar",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "15:30",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Mar",
+    "home_team": "Chippa United",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "18:00",
+    "venue": "Nelson Mandela Bay Stadium, Gqeberha",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Mar",
+    "home_team": "Sekhukhune United",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "18:00",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Mar",
+    "home_team": "Kruger United",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "20:15",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "13 Mar",
+    "home_team": "Milford FC",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "20:15",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "14 Mar",
+    "home_team": "Marumo Gallants",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "18:00",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Mar",
+    "home_team": "Milford FC",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "19:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Mar",
+    "home_team": "Sekhukhune United",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Mar",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "19:30",
+    "venue": "DHL Cape Town Stadium, Cape Town",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Mar",
+    "home_team": "Chippa United",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "19:30",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Mar",
+    "home_team": "Durban City",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Mar",
+    "home_team": "Golden Arrows",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "19:30",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Mar",
+    "home_team": "Orlando Pirates",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "19:30",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Mar",
+    "home_team": "Siwelele",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "19:30",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 Apr",
+    "home_team": "Durban City",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "10 Apr",
+    "home_team": "AmaZulu FC",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "15:00",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "10 Apr",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "15:00",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "10 Apr",
+    "home_team": "Polokwane City",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "15:00",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "10 Apr",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "17:30",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "10 Apr",
+    "home_team": "Richards Bay",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "20:00",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "11 Apr",
+    "home_team": "TS Galaxy",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "15:00",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "11 Apr",
+    "home_team": "Marumo Gallants",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "17:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "16 Apr",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "19:30",
+    "venue": "Danie Craven Stadium, Stellenbosch",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Apr",
+    "home_team": "AmaZulu FC",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "15:00",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Apr",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "15:00",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Apr",
+    "home_team": "Kruger United",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "15:00",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Apr",
+    "home_team": "Sekhukhune United",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "17:30",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "17 Apr",
+    "home_team": "Milford FC",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "20:00",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "18 Apr",
+    "home_team": "Polokwane City",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "15:00",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "18 Apr",
+    "home_team": "Siwelele",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "17:30",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "23 Apr",
+    "home_team": "Durban City",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "24 Apr",
+    "home_team": "Chippa United",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "15:00",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "24 Apr",
+    "home_team": "Marumo Gallants",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "15:00",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "24 Apr",
+    "home_team": "Orlando Pirates",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "15:00",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "24 Apr",
+    "home_team": "Richards Bay",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "17:30",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "24 Apr",
+    "home_team": "TS Galaxy",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "17:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "24 Apr",
+    "home_team": "Golden Arrows",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "20:00",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "25 Apr",
+    "home_team": "Siwelele",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "15:00",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Apr",
+    "home_team": "AmaZulu FC",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Apr",
+    "home_team": "Marumo Gallants",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "19:30",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "27 Apr",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "19:30",
+    "venue": "DHL Cape Town Stadium, Cape Town",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Apr",
+    "home_team": "Durban City",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "19:30",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Apr",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "19:30",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Apr",
+    "home_team": "Kruger United",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "19:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Apr",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "19:30",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "28 Apr",
+    "home_team": "Polokwane City",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "19:30",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "08 May",
+    "home_team": "Chippa United",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "15:00",
+    "venue": "Nelson Mandela Bay Stadium, Gqeberha",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "08 May",
+    "home_team": "Golden Arrows",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "15:00",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "08 May",
+    "home_team": "Polokwane City",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "15:00",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "08 May",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "17:30",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "08 May",
+    "home_team": "Milford FC",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "20:00",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 May",
+    "home_team": "Sekhukhune United",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "15:00",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 May",
+    "home_team": "Siwelele",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "15:00",
+    "venue": "Dr Molemela Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "09 May",
+    "home_team": "TS Galaxy",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "17:30",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 May",
+    "home_team": "Golden Arrows",
+    "away_team": "Polokwane City",
+    "score": null,
+    "time": "15:00",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 May",
+    "home_team": "Kruger United",
+    "away_team": "AmaZulu FC",
+    "score": null,
+    "time": "15:00",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 May",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Chippa United",
+    "score": null,
+    "time": "15:00",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 May",
+    "home_team": "Orlando Pirates",
+    "away_team": "Marumo Gallants",
+    "score": null,
+    "time": "15:00",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 May",
+    "home_team": "Richards Bay",
+    "away_team": "TS Galaxy",
+    "score": null,
+    "time": "15:00",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 May",
+    "home_team": "Sekhukhune United",
+    "away_team": "Milford FC",
+    "score": null,
+    "time": "15:00",
+    "venue": "Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 May",
+    "home_team": "Siwelele",
+    "away_team": "Kaizer Chiefs",
+    "score": null,
+    "time": "15:00",
+    "venue": "Free State Stadium, Bloemfontein",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "15 May",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Durban City",
+    "score": null,
+    "time": "15:00",
+    "venue": "Danie Craven Stadium, Stellenbosch",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 May",
+    "home_team": "AmaZulu FC",
+    "away_team": "Mamelodi Sundowns",
+    "score": null,
+    "time": "15:00",
+    "venue": "Moses Mabhida Stadium, Durban",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 May",
+    "home_team": "Chippa United",
+    "away_team": "Siwelele",
+    "score": null,
+    "time": "15:00",
+    "venue": "Buffalo City Stadium, East London, South Africa",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 May",
+    "home_team": "Durban City",
+    "away_team": "Kruger United",
+    "score": null,
+    "time": "15:00",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 May",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Richards Bay",
+    "score": null,
+    "time": "15:00",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 May",
+    "home_team": "Marumo Gallants",
+    "away_team": "Golden Arrows",
+    "score": null,
+    "time": "15:00",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 May",
+    "home_team": "Milford FC",
+    "away_team": "Stellenbosch FC",
+    "score": null,
+    "time": "15:00",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 May",
+    "home_team": "Polokwane City",
+    "away_team": "Orlando Pirates",
+    "score": null,
+    "time": "15:00",
+    "venue": "Old Peter Mokaba Stadium, Polokwane",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "22 May",
+    "home_team": "TS Galaxy",
+    "away_team": "Sekhukhune United",
+    "score": null,
+    "time": "15:00",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "UPCOMING"
+  },
+  {
+    "date": "26 Aug",
+    "home_team": "Golden Arrows",
+    "away_team": "Stellenbosch FC",
+    "score": "1 - 0",
+    "time": "N/A",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "26 Aug",
+    "home_team": "Richards Bay",
+    "away_team": "Kaizer Chiefs",
+    "score": "2 - 2",
+    "time": "N/A",
+    "venue": "Princess Magogo Stadium, Durban",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "25 Aug",
+    "home_team": "Kruger United",
+    "away_team": "Durban City",
+    "score": "0 - 2",
+    "time": "N/A",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "19 Aug",
+    "home_team": "Mamelodi Sundowns",
+    "away_team": "Marumo Gallants",
+    "score": "2 - 0",
+    "time": "N/A",
+    "venue": "Loftus Versfeld Stadium, Pretoria",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "16 Aug",
+    "home_team": "TS Galaxy",
+    "away_team": "Golden Arrows",
+    "score": "0 - 0",
+    "time": "N/A",
+    "venue": "Solomon Mahlangu Stadium, KwaMhlanga",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "16 Aug",
+    "home_team": "Chippa United",
+    "away_team": "Orlando Pirates",
+    "score": "0 - 3",
+    "time": "N/A",
+    "venue": "Jonsson Kings Park Stadium, Durban, KN",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "15 Aug",
+    "home_team": "Durban City",
+    "away_team": "Richards Bay",
+    "score": "1 - 1",
+    "time": "N/A",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "15 Aug",
+    "home_team": "Milford FC",
+    "away_team": "Kruger United",
+    "score": "2 - 1",
+    "time": "N/A",
+    "venue": "Sugar Ray Xulu Stadium, Clermont",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "15 Aug",
+    "home_team": "Sekhukhune United",
+    "away_team": "Polokwane City",
+    "score": "2 - 0",
+    "time": "N/A",
+    "venue": "Seshego Stadium, Polokwane",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "15 Aug",
+    "home_team": "AmaZulu FC",
+    "away_team": "Siwelele",
+    "score": "2 - 0",
+    "time": "N/A",
+    "venue": "Jonsson Kings Park Stadium, Durban, KN",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "15 Aug",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Mamelodi Sundowns",
+    "score": "1 - 1",
+    "time": "N/A",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "14 Aug",
+    "home_team": "Stellenbosch FC",
+    "away_team": "Marumo Gallants",
+    "score": "3 - 1",
+    "time": "N/A",
+    "venue": "Athlone Stadium, Cape Town",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "12 Aug",
+    "home_team": "AmaZulu FC",
+    "away_team": "Orlando Pirates",
+    "score": "1 - 1",
+    "time": "N/A",
+    "venue": "Jonsson Kings Park Stadium, Durban, KN",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "12 Aug",
+    "home_team": "Durban City",
+    "away_team": "Golden Arrows",
+    "score": "0 - 0",
+    "time": "N/A",
+    "venue": "Chatsworth Stadium, Chatsworth",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "12 Aug",
+    "home_team": "Kaizer Chiefs",
+    "away_team": "Sekhukhune United",
+    "score": "2 - 0",
+    "time": "N/A",
+    "venue": "FNB Stadium, Johannesburg",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "12 Aug",
+    "home_team": "Milford FC",
+    "away_team": "Siwelele",
+    "score": "1 - 0",
+    "time": "N/A",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "11 Aug",
+    "home_team": "Chippa United",
+    "away_team": "Richards Bay",
+    "score": "1 - 1",
+    "time": "N/A",
+    "venue": "Dobsonville Stadium, Soweto, Johannesburg",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "11 Aug",
+    "home_team": "Marumo Gallants",
+    "away_team": "Kruger United",
+    "score": "0 - 0",
+    "time": "N/A",
+    "venue": "Royal Bafokeng Stadium, Rustenburg",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "11 Aug",
+    "home_team": "Polokwane City",
+    "away_team": "Stellenbosch FC",
+    "score": "3 - 3",
+    "time": "N/A",
+    "venue": "Seshego Stadium, Polokwane",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "11 Aug",
+    "home_team": "TS Galaxy",
+    "away_team": "Mamelodi Sundowns",
+    "score": "2 - 3",
+    "time": "N/A",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "02 Aug",
+    "home_team": "Siwelele",
+    "away_team": "TS Galaxy",
+    "score": "2 - 2",
+    "time": "N/A",
+    "venue": "Free State Stadium, Bloemfontein",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "02 Aug",
+    "home_team": "Richards Bay",
+    "away_team": "Polokwane City",
+    "score": "1 - 2",
+    "time": "N/A",
+    "venue": "Richards Bay Stadium, Richards Bay",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "01 Aug",
+    "home_team": "Kruger United",
+    "away_team": "Kaizer Chiefs",
+    "score": "1 - 3",
+    "time": "N/A",
+    "venue": "Mbombela Stadium, Nelspruit",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "01 Aug",
+    "home_team": "Sekhukhune United",
+    "away_team": "Durban City",
+    "score": "1 - 0",
+    "time": "N/A",
+    "venue": "Seshego Stadium, Polokwane",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "01 Aug",
+    "home_team": "Golden Arrows",
+    "away_team": "Chippa United",
+    "score": "0 - 0",
+    "time": "N/A",
+    "venue": "King Goodwill Zwelithini Stadium, Durban",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "01 Aug",
+    "home_team": "Orlando Amstel Arena",
+    "away_team": "Milford FC",
+    "score": "2 - 0",
+    "time": "N/A",
+    "venue": "Orlando Amstel Arena, Soweto",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "01 Aug",
+    "home_team": "Stellenbosch FC",
+    "away_team": "AmaZulu FC",
+    "score": "0 - 1",
+    "time": "N/A",
+    "venue": "Sugar Ray Xulu Stadium, Clermont",
+    "status": "COMPLETED"
+  }
+]
