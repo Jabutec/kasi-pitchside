@@ -20,29 +20,42 @@ logger = logging.getLogger(__name__)
 
 
 def _create_engine(db_url: str):
-    """Create engine configured correctly for SQLite, Direct Postgres, or PgBouncer."""
+    """Create engine configured correctly for SQLite, direct Postgres, or PgBouncer."""
     if db_url.startswith("sqlite"):
         return create_engine(
             db_url,
-            connect_args={"check_same_thread": False} if ":memory:" in db_url else {},
             echo=False,
+            connect_args={"check_same_thread": False},
         )
 
-    # Check if connecting through PgBouncer (default port 6432)
+    # Auto-detect PgBouncer by port/name in the URL — kept from the
+    # proposed db.py, this is a genuine improvement over a manual flag.
     is_pgbouncer = ":6432" in db_url or "pgbouncer" in db_url
 
     if is_pgbouncer:
-        # Transaction-mode PgBouncer: Use NullPool and disable client-side prepared statements
+        # NullPool: PgBouncer (transaction pool_mode) is already the
+        # connection pool for Postgres. Layering SQLAlchemy's own pool
+        # on top double-pools and risks session-level state (prepared
+        # statements, SET commands) leaking across what SQLAlchemy
+        # thinks is one held connection but PgBouncer is actually
+        # swapping between transactions.
+        #
+        # NOTE: an earlier draft added connect_args={"prepare_threshold":
+        # None} here, intending to disable psycopg's automatic prepared
+        # statements under PgBouncer. That option is psycopg3-only —
+        # this project's DATABASE_URL uses psycopg2 throughout, where
+        # it's silently dropped (psycopg2 skips None-valued kwargs
+        # before they reach libpq) rather than doing anything. Left out
+        # here since it was dead code, not a working fix. If this
+        # project moves to psycopg3, prepared-statement handling under
+        # PgBouncer's transaction mode should be revisited properly then.
         return create_engine(
             db_url,
             poolclass=NullPool,
-            connect_args={
-                "prepare_threshold": None  # Disables prepared statements for psycopg3 / asyncpg compatibility
-            },
+            pool_pre_ping=True,
             echo=False,
         )
 
-    # Direct PostgreSQL connection
     return create_engine(
         db_url,
         pool_size=DB_POOL_SIZE,

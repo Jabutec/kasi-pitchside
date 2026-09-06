@@ -1,96 +1,162 @@
-"""
-crud.py — Data access layer for Kasi Pitchside database warehouse.
-"""
+"""Database CRUD operations"""
 
 import logging
-from typing import Any, Dict
-from sqlalchemy import text
+from typing import Any, Dict, List, Optional
+
+from sqlalchemy import func
+from sqlalchemy.dialects.postgresql import insert as pg_insert
+from sqlalchemy.dialects.sqlite import insert as sqlite_insert
 from sqlalchemy.orm import Session
+
+from warehouse.models import (
+    Match,
+    Player,
+    PlayerMatchStat,
+    Season,
+    StandingSnapshot,
+    Team,
+    Venue,
+)
 
 logger = logging.getLogger(__name__)
 
 
 class WarehouseCRUD:
+    """High-level CRUD for the PSL warehouse."""
+
     def __init__(self, session: Session):
         self.session = session
 
-    def get_or_create_season(self, season_name: str) -> int:
-        """Fetch season ID or insert new record if it does not exist."""
-        query = text("SELECT id FROM season WHERE name = :name")
-        res = self.session.execute(query, {"name": season_name}).fetchone()
-        if res:
-            return res[0]
+    def _insert_fn(self):
+        bind = self.session.get_bind()
+        return sqlite_insert if bind.dialect.name == "sqlite" else pg_insert
 
-        insert_stmt = text(
-            "INSERT INTO season (name) VALUES (:name) RETURNING id"
+    def get_or_create_team(self, name: str, short_code: Optional[str] = None) -> Team:
+        team = self.session.query(Team).filter_by(name=name).first()
+        if team:
+            return team
+        team = Team(name=name, short_code=short_code)
+        self.session.add(team)
+        self.session.flush()
+        logger.info(f"Created team: {name} (id={team.id})")
+        return team
+
+    def get_or_create_player(self, name: str, team_id: int, position: Optional[str] = None) -> Player:
+        insert_fn = self._insert_fn()
+        stmt = (
+            insert_fn(Player)
+            .values(name=name, team_id=team_id, position=position)
+            .on_conflict_do_nothing(index_elements=["name", "team_id"])
         )
-        new_id = self.session.execute(
-            insert_stmt, {"name": season_name}
-        ).fetchone()[0]
-        logger.info(f"Created season: {season_name} (id={new_id})")
-        return new_id
+        self.session.execute(stmt)
+        self.session.flush()
+        player = self.session.query(Player).filter_by(name=name, team_id=team_id).one()
+        return player
 
-    def get_or_create_team(self, team_name: str) -> int:
-        """Fetch team ID or insert record if it does not exist."""
-        if not team_name:
-            raise ValueError("Team name cannot be empty when creating team record.")
+    def get_or_create_season(self, name: str) -> Season:
+        season = self.session.query(Season).filter_by(name=name).first()
+        if season:
+            return season
+        season = Season(name=name)
+        self.session.add(season)
+        self.session.flush()
+        logger.info(f"Created season: {name} (id={season.id})")
+        return season
 
-        query = text("SELECT id FROM team WHERE name = :name")
-        res = self.session.execute(query, {"name": team_name}).fetchone()
-        if res:
-            return res[0]
+    def get_or_create_venue(self, name: str, city: Optional[str] = None) -> Venue:
+        venue = self.session.query(Venue).filter_by(name=name).first()
+        if venue:
+            return venue
+        venue = Venue(name=name, city=city)
+        self.session.add(venue)
+        self.session.flush()
+        logger.info(f"Created venue: {name} (id={venue.id})")
+        return venue
 
-        insert_stmt = text(
-            "INSERT INTO team (name) VALUES (:name) RETURNING id"
-        )
-        new_id = self.session.execute(
-            insert_stmt, {"name": team_name}
-        ).fetchone()[0]
-        logger.info(f"Created team: {team_name} (id={new_id})")
-        return new_id
-
-    def upsert_match(self, match_data: Dict[str, Any]) -> None:
-        """Safely upsert match data into the warehouse."""
-        home_name = match_data.get("home_team_name") or match_data.get("home_team")
-        away_name = match_data.get("away_team_name") or match_data.get("away_team")
-
-        # 1. Resolve foreign keys for teams
-        home_team_id = self.get_or_create_team(home_name)
-        away_team_id = self.get_or_create_team(away_name)
-
-        # 2. Extract match ID (fallback to composite key if missing)
-        raw_id = match_data.get("match_id") or match_data.get("external_id") or match_data.get("id")
-        if not raw_id or raw_id == "None":
-            # Fallback unique identifier if raw payload has no match ID
-            raw_id = f"m_{match_data['season_id']}_{match_data.get('matchday', 1)}_{home_team_id}_{away_team_id}"
-
-        params = {
-            "id": str(raw_id),
-            "season_id": int(match_data["season_id"]),
-            "matchday": int(match_data.get("matchday", 1)),
-            "kickoff_time": match_data.get("kickoff_time"),
-            "home_team_id": home_team_id,
-            "away_team_id": away_team_id,
-            "home_score": match_data.get("home_score"),
-            "away_score": match_data.get("away_score"),
-            "status": str(match_data.get("status", "FINISHED")).upper(),
-            "venue": match_data.get("venue"),
-        }
-
-        # 3. Query targeting 'id' instead of 'external_id'
-        upsert_query = text("""
-            INSERT INTO match (
-                id, season_id, matchday, kickoff_time,
-                home_team_id, away_team_id, home_score, away_score, status, venue
-            ) VALUES (
-                :id, :season_id, :matchday, :kickoff_time,
-                :home_team_id, :away_team_id, :home_score, :away_score, :status, :venue
+    def upsert_match(self, match_data: Dict[str, Any]) -> Match:
+        insert_fn = self._insert_fn()
+        stmt = (
+            insert_fn(Match)
+            .values(**match_data)
+            .on_conflict_do_update(
+                index_elements=["season_id", "home_team_id", "away_team_id", "matchday"],
+                set_={
+                    "venue_id": match_data.get("venue_id"),
+                    "match_date": match_data.get("match_date"),
+                    "kickoff_time": match_data.get("kickoff_time"),
+                    "home_score": match_data.get("home_score"),
+                    "away_score": match_data.get("away_score"),
+                    "status": match_data.get("status"),
+                    "updated_at": func.now(),
+                },
             )
-            ON CONFLICT (id) DO UPDATE SET
-                home_score = EXCLUDED.home_score,
-                away_score = EXCLUDED.away_score,
-                status = EXCLUDED.status,
-                kickoff_time = EXCLUDED.kickoff_time;
-        """)
+        )
+        self.session.execute(stmt)
+        self.session.flush()
+        match = (
+            self.session.query(Match)
+            .filter_by(
+                season_id=match_data["season_id"],
+                home_team_id=match_data["home_team_id"],
+                away_team_id=match_data["away_team_id"],
+                matchday=match_data["matchday"],
+            )
+            .one()
+        )
+        logger.info(f"Upserted match: {match.id} (status={match.status})")
+        return match
 
-        self.session.execute(upsert_query, params)
+    def upsert_player_stat(self, stat_data: Dict[str, Any]) -> None:
+        insert_fn = self._insert_fn()
+        stmt = (
+            insert_fn(PlayerMatchStat)
+            .values(**stat_data)
+            .on_conflict_do_update(
+                index_elements=["match_id", "player_id"],
+                set_={
+                    "team_id": stat_data.get("team_id"),
+                    "goals": stat_data.get("goals", 0),
+                    "assists": stat_data.get("assists", 0),
+                    "shots": stat_data.get("shots", 0),
+                    "minutes_played": stat_data.get("minutes_played", 0),
+                    "motm": stat_data.get("motm", False),
+                    "saves": stat_data.get("saves", 0),
+                    "goals_conceded": stat_data.get("goals_conceded", 0),
+                    "clean_sheet": stat_data.get("clean_sheet", False),
+                    "yellow_cards": stat_data.get("yellow_cards", 0),
+                    "red_cards": stat_data.get("red_cards", 0),
+                    "updated_at": func.now(),
+                },
+            )
+        )
+        self.session.execute(stmt)
+        logger.info(f"Upserted player stat: match={stat_data['match_id']}, player={stat_data['player_id']}")
+
+    def insert_standing_snapshot(self, snapshot_data: Dict[str, Any]) -> bool:
+        insert_fn = self._insert_fn()
+        stmt = (
+            insert_fn(StandingSnapshot)
+            .values(**snapshot_data)
+            .on_conflict_do_nothing(index_elements=["season_id", "team_id", "matchday"])
+        )
+        result = self.session.execute(stmt)
+        if result.rowcount == 0:
+            logger.warning(
+                f"Skipped duplicate standing snapshot: season={snapshot_data['season_id']}, "
+                f"team={snapshot_data['team_id']}, matchday={snapshot_data['matchday']}"
+            )
+            return False
+        logger.info(f"Inserted standing snapshot: matchday={snapshot_data['matchday']}, team={snapshot_data['team_id']}")
+        return True
+
+    def bulk_upsert_matches(self, matches: List[Dict[str, Any]]) -> None:
+        for m in matches:
+            self.upsert_match(m)
+
+    def bulk_upsert_player_stats(self, stats: List[Dict[str, Any]]) -> None:
+        for s in stats:
+            self.upsert_player_stat(s)
+
+    def bulk_insert_snapshots(self, snapshots: List[Dict[str, Any]]) -> None:
+        for snap in snapshots:
+            self.insert_standing_snapshot(snap)

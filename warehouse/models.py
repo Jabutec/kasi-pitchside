@@ -70,6 +70,9 @@ class Player(Base):
             "position IN ('GK', 'DEF', 'MID', 'FWD')",
             name="ck_player_position",
         ),
+        # FIX: was missing — without this, concurrent get_or_create calls
+        # (e.g. live poller + backfill job running close together) can
+        # insert duplicate rows for the same player with no DB-level guard.
         UniqueConstraint("name", "team_id", name="uq_player_team"),
     )
 
@@ -79,6 +82,9 @@ class Player(Base):
     )
     name: Mapped[str] = mapped_column(String(100), nullable=False)
     position: Mapped[Optional[str]] = mapped_column(String(10))
+    # REMOVED: yellow_card / red_card — these belong on PlayerMatchStat,
+    # tied to the specific match they occurred in, not as a bare running
+    # total with no match context. See PlayerMatchStat.yellow_cards/red_cards.
 
     team: Mapped["Team"] = relationship(back_populates="players")
     stats: Mapped[List["PlayerMatchStat"]] = relationship(
@@ -94,6 +100,8 @@ class Match(Base):
             "season_id", "home_team_id", "away_team_id", "matchday",
             name="uix_match_natural_key",
         ),
+        # FIX: was missing — stops a bad scrape from inserting a team
+        # playing itself.
         CheckConstraint(
             "home_team_id != away_team_id", name="ck_match_teams_differ"
         ),
@@ -101,6 +109,7 @@ class Match(Base):
             "status IN ('scheduled', 'live', 'full-time', 'postponed')",
             name="ck_match_status",
         ),
+       
         Index("idx_match_home_team", "home_team_id"),
         Index("idx_match_away_team", "away_team_id"),
         Index("idx_match_date", "match_date"),
@@ -122,6 +131,8 @@ class Match(Base):
     match_date: Mapped[date] = mapped_column(Date, nullable=False)
     kickoff_time: Mapped[Optional[time]] = mapped_column(Time)
     matchday: Mapped[int] = mapped_column(Integer, nullable=False)
+    # home_score/away_score default to NULL (not 0) — a scheduled match
+    # that hasn't kicked off should read as "not yet played", not "0-0".
     home_score: Mapped[Optional[int]] = mapped_column(Integer)
     away_score: Mapped[Optional[int]] = mapped_column(Integer)
     status: Mapped[str] = mapped_column(
@@ -173,6 +184,8 @@ class PlayerMatchStat(Base):
     saves: Mapped[int] = mapped_column(Integer, default=0)
     goals_conceded: Mapped[int] = mapped_column(Integer, default=0)
     clean_sheet: Mapped[bool] = mapped_column(Boolean, default=False)
+    # ADDED: moved here from Player — discipline tied to the specific
+    # match it happened in, not a bare season-running total.
     yellow_cards: Mapped[int] = mapped_column(Integer, default=0)
     red_cards: Mapped[int] = mapped_column(Integer, default=0)
     created_at: Mapped[DateTime] = mapped_column(
@@ -210,9 +223,12 @@ class StandingSnapshot(Base):
     wins: Mapped[int] = mapped_column(Integer, default=0)
     draws: Mapped[int] = mapped_column(Integer, default=0)
     losses: Mapped[int] = mapped_column(Integer, default=0)
+    
     goals_for: Mapped[int] = mapped_column(Integer, default=0)
     goals_against: Mapped[int] = mapped_column(Integer, default=0)
     goal_difference: Mapped[int] = mapped_column(Integer, default=0)
     recorded_date: Mapped[date] = mapped_column(Date, nullable=False)
+    
+
     season: Mapped["Season"] = relationship(back_populates="snapshots")
     team: Mapped["Team"] = relationship(back_populates="snapshots")
